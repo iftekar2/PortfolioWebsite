@@ -1,0 +1,789 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+/*This section is preloader and it only shows up when the pace is refreshed*/
+.preloader{
+    background: #1f6dc7 url(/images/preloader.gif) no-repeat center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+/*This is going to give all our images a border-radius*/
+img{
+    border-radius: 18px;
+}
+
+/*This section is targetting everything at once*/
+.wrapper{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/*This is Nav Section*/
+
+/*This is effecting the Header Section */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    transition: 5s;
+}
+
+/*This is effecting the hover*/
+header:hover{
+    transform: scale(1.03);
+    color: white;
+    background-color: #0a192f;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*This is effecting the Logo that is on the left sode*/
+.logo-text{
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
+
+/*This is effecting the Nav items like About and Experience*/
+nav ul{
+    display: flex;
+    gap: 4em;
+}
+
+ul a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.navSection a{
+    transition: 5s;
+}
+
+.navSection:hover a{
+    color: white;
+}
+
+
+/*This is Start of Home Section*/
+
+/*This section is targetting the Elements that are going to be in the body*/
+.body-content{
+    margin: 0 auto;
+}
+
+/*This section is targetting the Home section*/
+.homePage{
+    display: flex;
+    gap: 5em;
+    margin-top: 2%;
+    align-items: center;
+    justify-content: center;
+    transition: 5s;
+}
+
+.homePage:hover{
+    transform: scale(1.03);
+    color: white;
+    background-color: #0a192f;
+}
+
+/*This is giving Width and Gap to our left and right column*/
+.leftColumn, .rightColumn{
+    width: 25%;
+    flex-grow: 1;
+}
+
+/*In here we are styling out Fonts*/
+h1{
+    font-size: 36px;
+    margin: 0;
+}
+
+h2{
+    font-size: 32px;
+    margin: 0;
+}
+
+h3{
+    font-size: 24px;
+    margin: 0;
+}
+
+.homeText p{
+    font-size: 20px;
+    margin: 0;
+}
+/*-------*/
+
+/*This is giving our Images Height and Width*/
+.imageOne, .imageTwo, .imageThree, .imageFour{
+    width: 268px;
+    height: 260px;
+}
+
+/*This is going to remove the Image that we can see in Mobile view when we are in Desktop view*/
+@media screen and ( min-width: 925px){
+    .backgroundImage{
+        display: none;
+    }
+}
+
+
+/*This section is for Mobile view for Home section*/
+@media screen and (max-width: 925px) {
+    /*In here I am hiding the images from showing when we are in mobile view*/
+    .leftColumn{
+        display: none;
+    }
+    .rightColumn{
+        display: none;
+    }
+    /**/
+
+    /*This is styling the Nav section when it is in Mobile view*/
+    .logo-text{
+        margin-left: 10px;
+    }
+
+    .navItems{
+        padding: 5px;
+        gap: 2em;
+    }
+    /**/
+
+    /*This is Customizing the Image when it is in Mobile view*/
+    .backgroundImage{
+        border-radius: 0%;
+    }
+
+    img{
+        height: 700px;
+        width: 500px;
+        border-radius: 0%;
+    }
+    /*-------*/
+
+    /*This is removing margin for Home page when it is in Mobile view*/
+    .homePage{
+        margin: 0;
+    }
+
+    /*This is Resizing and customizing the text in the Mobile view*/
+    .homeText{
+        margin: 0 90px;
+        position: absolute;
+        background-color: white;
+        width: 400px;
+        height: 200px;
+        border-radius: 1.8em;
+        transition: 0;
+    }
+
+    .homeText:hover{
+        color: black;
+    }
+
+    h1{
+        font-size: 26px;
+        margin-left: 25px;
+    }
+    
+    h2{
+        font-size: 22px;
+        margin-left: 25px;
+    }
+    
+    h3{
+        font-size: 18px;
+        margin-left: 25px;
+        margin-top: 10px;
+    }
+    
+    .homeText p{
+        font-size: 18px;
+        margin-left: 25px;
+    }
+    /*--------*/
+}
+/*This is End of Home Section*/
+
+
+/*This is Start of About Section*/
+
+/*This is effecting the Text in our About Section */
+.aboutText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+/*This is effecting the P tag in our About page*/
+.aboutMeText p{
+    color: black;
+    font-size: 20px;
+    width: 750px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+/*This is effecting the list in our About Section */
+.aboutMeText li{
+    color: black;
+    font-size: 20px;
+    width: 650px;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+/*This is effecting My Image*/
+.myImage img{
+    height: 500px;
+    width: 400px;
+}
+
+/*This is effecting everything in the About Section*/
+.aboutItems{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10em;
+}
+
+/*This effects the About section when we hover over it*/
+.aboutPage{
+    transition: 5s;
+    margin-bottom: 30px;
+}
+
+.aboutPage:hover{
+    transform: scale(1.03);
+    color: white;
+    background-color: #0a192f;
+}
+
+/*This is effect the P tags when we are h=hovering over the About Section */
+.aboutPage p{
+    transition: 5s;
+}
+
+.aboutPage:hover p{
+    color: white;
+}
+
+/*This is effect the bullet points when we are hovering over the About Section*/
+.aboutPage li{
+    transition: 5s;
+}
+
+.aboutPage:hover li{
+    color: white;
+}
+
+/*This is the start of Mobile section for About Page*/
+@media screen and (max-width: 825px) {
+    .aboutPage{
+        width: 485px;
+    }
+    .aboutItems{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+/*This is effecting the Text when it is Mobile view*/
+    .aboutMeText p, .aboutMeText li{
+        max-width: 450px;
+        margin-left: 120px;
+        margin-right: 120px;
+    }
+/*This is effecting my Image when it is in Mobile view*/
+    .myImage img{
+        height: 550px;
+        margin-top: -80px;
+    }
+}
+
+/*This is the end of About Section*/
+
+
+/*This is the Start of Experience Section */
+
+/*This is effecting the name of the Internship*/
+.internshipName a{
+    margin-top: 12px;
+    margin-left: 5px;
+}
+
+.internshipName{
+    height: 50px;
+}
+
+/*This is effecting all the Experience Section*/
+.experiencePage{
+    transition: 5s;
+}
+
+.experiencePage:hover{
+    transform: scale(1.03);
+    background-color: #0a192f;
+    color: white;
+}
+
+/*This is effectin the Experience Title*/
+.experienceTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+/*This is effecting the contant that is inside Epxerience Section */
+.experienceOne{
+    display: flex;
+    flex-wrap: wrap;
+    height: 600px;
+}
+
+.experienceOne:hover{
+    background-color: #194685;
+}
+
+/*This is effecting the First image in the Experience Section */
+.experienceImageOne{
+    height: 380px;
+    width: 600px;
+}
+
+.experienceOne img{
+    margin-top: 120px;
+}
+
+/*This is effecting the Experience Text*/
+.experienceText{
+    font-size: 20px;
+    width: 600px;
+    height: 450px;
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+.experienceText li{
+    margin-left: 30px;
+}
+
+/*This is effectin the Title of the image*/
+.internshipName{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.internshipName a{
+    text-decoration: none;
+    padding-top: 1.5%;
+    color: #61f9d5;
+}
+
+/*This is effecting the Experience section when it is in Mobile view */
+@media screen and (max-width: 925px){
+    /*This is giving the height to Experience One*/
+    .experienceOne{
+        height: 700px;
+    }
+
+    /*This is effecting the name of the Internship*/
+    .internshipName p, .internshipName a{
+        margin-top: -10px;
+    }
+
+    .experienceBullitPoints{
+        margin-top: -50px;
+        margin-left: -20px;
+    }
+
+    .experienceOne img{
+        width: 350px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -50px;
+        margin-left: 70px;
+    }
+
+    /*This is effecting the name of the Internship*/
+    .internshipName p{
+        margin-left: -10px;
+    }
+
+    #internshipName a{
+        margin-top: -100px;
+    }
+
+    .experienceTwoBullitPoints{
+        margin-top: -50px;
+        margin-left: -50px;
+    }
+
+    .experienceTwo img{
+        width: 350px;
+        height: 200px;
+        margin-left: 10px;
+    }
+
+    /*This is effecting the Image of Experience Two*/
+    #experienceImageTwo{
+        margin-top: -90px;
+        margin-bottom: 50px;
+    }
+
+    .experienceThreeBullitPoints{
+        margin-left: -70px;
+        margin-right: 20px;
+        margin-top: -50px;
+    }
+
+    /*This is effecting the Image of the Third Project*/
+    .experienceThree img{
+        height: 200px;
+        width: 300px;
+        margin-top: -500px;
+    }
+
+    #experienceImageThree{
+        margin-top: -150px;
+        margin-bottom: 50px;
+    }
+}
+
+/*This is the end of the First Experience */
+
+/*This is the start of the start of Second Section */
+.experienceTwo{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 50px;
+    padding-top: 60px;
+}
+
+/*This is effecting the First image in the Experience Section */
+.experienceImageTwo{
+    height: 250px;
+    width: 500px;
+}
+
+.experienceTwo img{
+    margin-top: 110px;
+    background-color: white;
+    margin-left: 20px;
+}
+
+/*This is effectin the Title of the image*/
+.internshipName{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.internshipName a{
+    text-decoration: none;
+    padding-top: 1.5%;
+    color: #61f9d5;
+}
+
+/*This is effecting the Experience Text*/
+.experienceTextTwo{
+    font-size: 20px;
+    width: 600px;
+    height: 500px;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+.experienceTextTwo li{
+    margin-left: 30px;
+}
+
+.experienceTwo:hover{
+    background-color: #1e3454;
+}
+
+/*This is the end of the Second Experience */
+
+/*This is the start of the start of Third Section */
+.experienceThree{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 50px;
+    padding-top: 60px;
+}
+
+/*This is effecting the First image in the Experience Section */
+.experienceImageThree{
+    height: 300px;
+    width: 500px;
+    margin-left: 20px;
+}
+
+.experienceThree img{
+    margin-top: 110px;
+}
+
+/*This is effectin the Title of the image*/
+.internshipName{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.internshipName a{
+    text-decoration: none;
+    padding-top: 1.5%;
+    color: #61f9d5;
+}
+
+/*This is effecting the Experience Text*/
+.experienceTextThree{
+    font-size: 20px;
+    width: 600px;
+    height: 500px;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+.experienceTextThree li{
+    margin-left: 30px;
+}
+
+.experienceThree:hover{
+    background-color: #104185;
+}
+
+/*This is the end of the Third Experience */
+
+/*This is where the Project Section start*/
+
+/*This effecting the Project Page*/
+.projectPage{
+    margin-top: 50px;
+    transition: 5s;
+    height: 700px;
+}
+
+.projectPage:hover{
+    transform: scale(1.03);
+    background-color: #0a192f;
+    color: white;
+}
+
+.projectTitle{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/*This is effecting the Title of the project*/
+.projectText h3{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 5px;
+    color: white;
+}
+
+/*This is effecting all the Project at once the Image and Text*/
+.projectContent{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 50px;
+    margin-left: 5px;
+}
+
+/*This is effecting the image of the project*/
+.projectPage img{
+    height: 240px;
+    width: 315px;
+    cursor: pointer;
+}
+
+/*This effecting the text*/
+.projectText p{
+    font-size: 16px;
+    margin: 10px;
+}
+
+.projectDescription{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/*This is effecting what I used to build this project*/
+.builtWith{
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #61f9d5;
+}
+
+.howItWasMake{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+/*This is hiding the discription of the project*/
+.hide{
+    display: none;
+}
+
+/*This is effecting the project Text*/
+.projectText{
+    width: 315px;
+    height: 250px;
+    background-color: black;
+    margin-top: -245px;
+    border-radius: 18px;
+    padding-top: 250px;
+}
+
+/*This is effecting the button */
+.playText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+}
+
+.playButton a{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 925px) {
+    .projectContent{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    #projectPage{
+        background-color: #0a192f;
+        height: 1150px;
+    }
+}
+
+/*This is the end of the Project Section*/
+
+/*This is the start of Contact Section*/
+.contactPage{
+    transition: 5s;
+}
+
+.contactPage:hover{
+    transform: scale(1.03);
+    background-color: #0a192f;
+    color: white;
+}
+
+/*This section is for the Title*/
+.contactTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*This section is for Text inside the Contact Section*/
+.contactText{
+    height: 300px;
+    width: 500px;
+    margin: 80px 400px;
+    font-size: 20px;
+    position: absolute;
+    background-color: #0a192f;
+    padding: 20px;
+    border-radius: 18px;
+    color: white;
+}
+
+/*This section is for Contact Section background Image*/
+.contactBackground img{
+    height: 475px;
+    width: 300px;
+}
+
+.contactBackground{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/*This section is for Contact Image*/
+.connect{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    cursor: pointer;
+}
+
+.connect i{
+    color: white; 
+    font-size: 50px;
+}
+
+/*This section is for Copuright*/
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0a192f;
+    color: white;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 925px){
+    .contactBackground img{
+        display: none;
+    }
+
+    .contactPage{
+        margin-top: 50px;
+    }
+
+    #contactText{
+        margin-left: 20px;
+        height: 350px;
+        width: 400px;
+    }
+
+    .copyright{
+        margin-top: 450px;
+    }
+}
